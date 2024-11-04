@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: green;
+        }
+        .details {
+            text-align: left;
+            margin: 20px auto;
+            width: 300px;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Congratulations!</h1>
+    <p>You have successfully submitted your information.</p>
+
+    <!-- Section to display the submitted details -->
+    <div class="details">
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+        <p><strong>City:</strong> <span id="displayCity"></span></p>
+        <p><strong>State:</strong> <span id="displayState"></span></p>
+        <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+        <p><strong>Mobile:</strong> <span id="displayMobile"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    </div>
+
+    <!-- Back button -->
+    <div class="button-container">
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage and display it
+        document.getElementById("displayName").textContent = localStorage.getItem("name");
+        document.getElementById("displayAddress").textContent = localStorage.getItem("address");
+        document.getElementById("displayCity").textContent = localStorage.getItem("city");
+        document.getElementById("displayState").textContent = localStorage.getItem("state");
+        document.getElementById("displayGender").textContent = localStorage.getItem("gender");
+        document.getElementById("displayMobile").textContent = localStorage.getItem("mobile");
+        document.getElementById("displayEmail").textContent = localStorage.getItem("email");
+
+        // Go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

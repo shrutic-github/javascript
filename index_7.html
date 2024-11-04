@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Operations</title>
+  <link rel="stylesheet" href="style_7.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Array Operations</h1>
+
+    <!-- Input to specify the size of the array -->
+    <label for="arraySize">Enter the array size:</label>
+    <input type="number" id="arraySize" placeholder="Array size" min="1">
+    <button onclick="createArray()">Create Array</button>
+    <br><br>
+
+    <!-- Input to add elements to the array -->
+    <label for="addElement">Enter an element (e.g., 5, 'hello', [1,2,3]):</label>
+    <input type="text" id="addElement" placeholder="Enter element">
+    <button onclick="addElement()">Add Element</button>
+    <br><br>
+
+    <!-- Button to view the current array -->
+    <button onclick="viewArray()">View Array</button>
+
+    <!-- Div to display the array results -->
+    <div id="arrayResult"></div>
+
+    <div class="info">
+      <h2>Name: Tanmay Deo</h2>
+      <h3>Roll Number: 42315</h3>
+    </div>
+  </div>
+
+  <script src="script_7.js"></script>
+</body>
+
+</html>
